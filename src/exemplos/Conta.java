@@ -1,13 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package exemplos;
 
-/**
- *
- * @author Wevertton
- */
+
 public class Conta {
+    int numero;
+    String nomeTitular;
+    double saldo;
     
+    void depositar (double valor) {
+        this.saldo = this.saldo + valor;
+    }
+    
+    boolean sacar(double valor) {
+        if(valor <= this.saldo) {
+        //subtrai o valor do saldo
+        //this.saldo = this.saldo - valor;
+        this.saldo -= valor;
+        return true;
+        }else
+            return false;
+    }
 }
+
