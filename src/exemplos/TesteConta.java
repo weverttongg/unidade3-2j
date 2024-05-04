@@ -6,9 +6,11 @@ public class TesteConta {
         Conta c = new Conta();
         c.depositar (50);
         c.depositar (100);
+        c.setNomeTitular("Wevertton R");
+        c.setNumero(25688);
         
         //condição
-        boolean saqueEfetuado = c.sacar(125);
+        boolean saqueEfetuado = c.sacar(151);
         if (saqueEfetuado) {
             
             //imprimindo com caixa de dialogo
@@ -27,10 +29,10 @@ public class TesteConta {
         }
          
         //imprimindo com caixa de dialogo
-        JOptionPane.showMessageDialog(null,"Saldo Disponivel: R$" + c.saldo);
+        JOptionPane.showMessageDialog(null,"Saldo Disponivel: R$" + c.getSaldo());
         
         //imprimindo normalmente
-        System.out.println("Saldo Disponivel: R$" + c.saldo);
+        System.out.println(c);
         
     }
 }
