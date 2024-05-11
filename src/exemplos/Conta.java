@@ -7,6 +7,12 @@ public class Conta {
     private String nomeTitular;
     private double saldo;
     
+    public Conta(int numero, String nomeTitular, double saldo) {
+        this.numero = numero;
+        this.nomeTitular = nomeTitular;
+        this.saldo = 0;
+    }
+    
     //class void não retorna valor
     void depositar (double valor) {
         this.saldo = this.saldo + valor;
